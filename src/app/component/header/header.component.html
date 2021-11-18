@@ -1,0 +1,70 @@
+
+<header>
+    <div class="container-content">
+        <div class="header">
+            <div class="header-left">
+                <div class="header-logo">
+                    <img src="	https://metruyenchu.com/assets/images/logo.png?221031" alt="logo" class="header-logo__img">
+                </div>
+                <div class="header-category">
+                    <i class="fas fa-bars"></i>
+                    <span>Danh sách</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="header-category">
+                    <i class="fas fa-bars"></i>
+                    <span>Thể loại</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="header-search">
+                <input type="text" placeholder="Tìm kiếm" class="header-search__input">
+                <button class="header-search__btn" >
+                    <i class="fas fa-search icon"></i>
+                </button>
+            </div>
+            <div class="header-authen">
+                <div>
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="label" (click)="handleThem()">
+                        <i class="fas fa-moon"></i>
+                        <i class='fas fa-sun'></i>
+                        <span class='ball' [class.toggle]='isToggle'></span>
+                    </label>
+                </div>
+                <ul class="header-authen__user" *ngIf="!user; else displayUser">
+                    <li class="header-authen__user--login"><a routerLink="/login">Đăng nhập</a></li>
+                    <li class="header-authen__user--logout"><a routerLink='/sign'> Đăng ký</a></li>
+                </ul>
+                <ng-template #displayUser>
+                    <div class="user">
+                        <img src="https://lh3.googleusercontent.com/a/AATXAJy_a2cNkrjODi7Zz2Ic2ZyO-VOJxbaEmrTOVHg_=s96-c" alt="ảnh đại diện" class="user-img">
+                        <p class="user__name">hieu nguyen</p>
+                        <ul class="user-list">
+                            <li class="user-list__item">
+                                <a href="">
+                                    Thông tin cá nhân
+                                </a>
+                            </li>
+                            <li class="user-list__item">
+                                <a href="">
+                                    Đăng bài
+                                </a>
+                            </li>
+                            <li class="user-list__item">
+                                <a href="">
+                                    Nạp tiền                            
+                                </a>
+                            </li>
+                            <li class="user-list__item" (click)="logout()">
+                                <a href="">
+                                    Thoát
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</header>

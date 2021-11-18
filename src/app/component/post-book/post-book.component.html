@@ -1,0 +1,90 @@
+<app-header></app-header>
+<!-- <p-toast position="bottom-center" key="c" (onClose)="onReject()" [baseZIndex]="5000">
+  <ng-template let-message pTemplate="message">
+      <div class="p-flex p-flex-column" style="flex: 1">
+          <div class="p-text-center">
+              <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+              <h4>{{message.summary}}</h4>
+              <p>{{message.detail}}</p>
+          </div>
+          <div class="p-grid p-fluid">
+              <div class="p-col-6">
+                  <button type="button" pButton (click)="onConfirm()" label="Yes" class="p-button-success"></button>
+              </div>
+              <div class="p-col-6">
+                  <button type="button" pButton (click)="onReject()" label="No" class="p-button-secondary"></button>
+              </div>
+          </div>
+      </div>
+  </ng-template>
+</p-toast> -->
+<p-toast></p-toast>
+<div style="background-color: #f1f1f1;">
+  <div class="container-content">
+    <form  [formGroup]="postBookForm" (ngSubmit)="onSubmit()">
+        <h2 class="text-lg-center" style="font-size: 30px;">Đăng truyện </h2>
+        <div class="group">
+          <div class="group-left">
+            <div class="row-control">
+              <mat-form-field appearance="outline">
+                <mat-label>Tên truyện</mat-label>
+                <input matInput placeholder="Nhập tên truyện" formControlName="nameBook" />
+                <mat-error *ngIf=" postBookForm.controls.nameBook.errors?.required">
+                  Vui lòng nhập tên truyện
+                </mat-error>
+                <mat-error *ngIf="postBookForm.controls.nameBook.errors?.nameExists">
+                  Tên truyện đã tồn tại. Vui lòng nhập lạ!!
+                </mat-error>
+                <mat-progress-spinner matSuffix [mode]="'indeterminate'" [diameter]="20" *ngIf="postBookForm.controls.nameBook.pending">
+                </mat-progress-spinner> 
+              </mat-form-field>
+            </div>
+            <div class="row-control">
+                <mat-form-field appearance="outline">
+                  <mat-label>Tên tác giả</mat-label>
+                  <input matInput placeholder="Nhập tên truyện" formControlName="nameAuthor" />
+                </mat-form-field>
+            </div>
+            <div class="row-control">
+              <label for="category" style="font-size: 16px;">Thể loại:</label>
+              <select id="category" [(ngModel)]="valueSelectedOption" formControlName="category">
+                <option *ngFor="let c of category" [value]="c.name">
+                  {{c.name}}
+                </option>
+                <option value="khac">Khác</option>
+              </select>
+              <mat-form-field *ngIf="valueSelectedOption === 'khac'" appearance="outline" class="test">
+                <mat-label>Thể loại</mat-label>
+                <input matInput placeholder="Nhập thể loại" formControlName="addCategory"  />
+                <mat-error *ngIf="postBookForm.controls.addCategory.errors?.nameExists">
+                  Tên thể loại đã tông tại!!
+                </mat-error>
+              </mat-form-field>
+              
+            </div>
+            <div class="group-input-file">
+              <span >Chọn tệp ảnh(<span style="color: red;">JPG,JPEG,PNG</span>):</span>
+              <input type="file"
+              id="file"
+              formControlName="img"
+              (change)="onFileSelected($event)"
+              />
+            </div>
+          </div>
+          <div class="group-img">
+            <img src={{fb}} alt="ảnh" class="img">
+            <div *ngIf="isLoadImg" class="loading"></div>
+          </div>
+        </div>
+        <h4>Mô tả truyện:</h4>
+        <ckeditor #myEditor [editor]="editor" formControlName="description"></ckeditor>
+        <mat-error *ngIf="postBookForm.controls.description.errors?.minLength">
+          Không thể nhập ít hơn 35 ký tự
+        </mat-error>
+        <div class="move-button">
+          <button mat-flat-button color="primary" [disabled]="postBookForm.invalid" >Đăng truyện</button>
+        </div>
+    </form>
+  </div>
+</div>
+

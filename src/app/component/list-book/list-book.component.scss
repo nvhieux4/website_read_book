@@ -1,0 +1,93 @@
+.container-content {
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 280px;
+    background-color: var(--second-bg-color);
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section {
+    background-color: var(--second-bg-color);
+}
+
+
+.title {
+    color: var(--main-text);
+    font-size: 20px;
+}
+.book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    &-img {
+        width: 85px;
+        box-shadow: 4px 4px 2px var(--hove-color);
+        transition: all ease 0.25ms;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &-information {
+        padding-left: 10px;
+        flex: 1;
+        a {
+            text-decoration: none;
+            
+        }
+        &__title {
+            color: var(--main-text);
+            font-weight: 500;
+            font-size: 16px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-height: 1.4;
+            transition: all ease 0.3ms;
+            &:hover {
+                color: #b78a28;
+            }
+        }
+        &__description{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color: var(--main-text);
+            overflow: hidden;
+            opacity: 0.85;
+        }
+
+        &__origin{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            &-author{
+                color: var(--main-text);
+                display: flex;
+                justify-content: center;
+
+                &--name {
+                    margin-left: 8px;
+                    width: 145px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                }
+               
+            }
+            &-category {
+                padding: 0 8px;
+                border: 1px solid #b78a28;
+                color: #b78a28;
+                cursor: pointer;
+            }
+        }
+    }
+}
+

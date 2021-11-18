@@ -1,0 +1,96 @@
+
+.container-content {
+  width: 1000px;
+  margin: 0 auto;
+  display: block;
+  background-color: #e3ddd680;
+  padding: 20px;
+  margin-top: 8px;
+  box-shadow: 2px 2px 5px #ccc, -2px 2px 5px #ccc;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+mat-form-field {
+  width: 350px;
+}
+
+.test {
+  width: 165px !important;
+}
+
+.group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &-img {
+    position: relative;
+    .img {
+      width: 250px;
+      height: 200px;
+      object-fit: cover;
+      border: 1px solid #8b837a80;
+      border-radius: 4px;
+      z-index: 2;
+    }
+    .loading {
+      position: absolute;
+      top: 44%;
+      left: 46%;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      box-shadow:
+        0 -3em rgba(255, 255, 255, 1),
+        2.25em -2.25em rgba(255, 255, 255, 0.875),
+        3em 0 rgba(255, 255, 255, 0.75),
+        2.25em 2.25em rgba(255, 255, 255, 0.625),
+        0 3em rgba(255, 255, 255, 0.5),
+        -2.25em 2.25em rgba(255, 255, 255, 0.375),
+        -3em 0 rgba(255, 255, 255, 0.25),
+        -2.25em -2.25em rgba(255, 255, 255, 0.125)
+        ;
+      animation: spin 1.2s linear infinite;
+    }
+    
+    @keyframes spin {
+      100% { transform: rotate(-360deg) }
+    }
+  }
+  
+}
+.move-button {
+  text-align: end;
+  margin-right: 100px;
+  margin-top: 25px;
+}
+
+#category {
+  padding: 10px;
+  width: 150px;
+  height: 42px;
+  font-size: 16px;
+  border-radius: 7px;
+  margin-right: 8px;
+  margin-left: 3px;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  outline: none;
+}
+
+:host ::ng-deep .ck-editor__editable_inline {
+  max-height: 450px !important;
+}
+
+:host ::ng-deep { 
+  
+  .p-toast {
+    width: 32rem !important;
+    font-size: 15px !important;
+    height: 100px !important;
+  } 
+}

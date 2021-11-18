@@ -1,0 +1,37 @@
+<section>
+    <div class="container-content">
+        <div class="row">
+            <div class="col-8">
+                <h3 class="title">Biên tập viên đề cử</h3>
+                <div class="row">
+                    <div class="col-6" *ngFor="let book of listBook">
+                        <div class="book">
+                            <a href="">
+                                <img src={{book.linkImg}} alt="ảnh truyện" class="book-img">
+                            </a>
+                            <div class="book-information">
+                                <a href="">
+                                    <h3 class="book-information__title">{{book.nameBook}}</h3>
+                                </a>
+                                <p class="book-information__description" >
+                                    {{book.description | pipeHTML }}
+                                </p>
+                                <div class="book-information__origin">
+                                    <span class="book-information__origin-author">
+                                        <i class="fas fa-user-edit"></i>
+                                        <span class="book-information__origin-author--name"> {{book.nameAuthor}} </span>
+                                    </span>
+                                    <span class="book-information__origin-category">{{book.category}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <app-list-book-history></app-list-book-history>
+            </div>
+        </div>
+    </div>
+</section>
+

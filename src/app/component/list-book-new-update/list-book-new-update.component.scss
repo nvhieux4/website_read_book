@@ -1,0 +1,58 @@
+.container-content {
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+    padding: 20px;
+}
+
+section {
+    background-color: var(--second-bg-color);
+    padding-top: 30px;
+}
+
+.title {
+    color: var(--main-text);
+    font-size: 20px;
+}
+table {
+    td {
+        padding:5px;
+        vertical-align: middle;
+        color: var(--main-text);
+    }
+
+    .text-title {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        width: 90%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        &-link {
+            text-decoration: none;
+            color: var(--main-text);
+
+            &:hover {
+                color: #b78a28;
+            }
+        }
+    }
+
+    .text-chapter {
+        width: 90%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        text-decoration: none;
+        color: var(--main-text);
+        &:hover {
+            color: #b78a28;
+        }
+    }
+    .opacity {
+        opacity: 0.6;
+    }
+}

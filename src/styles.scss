@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+	--primary-color: #4834d4;
+	--success-color: #6ab04c;
+	--warning-color: #f0932b;
+	--danger-color: #eb4d4b;
+
+	--light-color: #212529;
+	--light-second-color: #727475;
+	--light-background: #f5f4f2;
+	--light-second-background: #fff;
+	--light-text:#111;
+	--light-box-shadow: #333;
+	--light-hove:#ccc;
+	--light-border: #d3d2d0;
+	--light-header-background:#f5f4f2;
+	--light-color-them:#cdc6c669;
+	--light-color-box-shadow:#c5c5c5de;
+	/* --light-boxsh */
+
+	--dark-color: #909090;
+	--dark-second-color: #f5f6fa;
+	--dark-background: #386d9d;
+	--dark-second-background: #18191a;
+	--dark-text:#fff;
+	--dark-box-shadow: #dbdbdb;
+	--dark-hove:#0e0f10;
+	--dark-border:#1e68b5;
+	--dark-header-background:#242526;
+	--dark-color-them:#0e0f10;
+	--dark-color-box-shadow:#333;
+}
+
+
+:root[data-them="light"] {
+	--main-bg-color: var(--light-background);
+	--second-bg-color: var(--light-second-background);
+	--main-color: var(--light-color);
+	--second-color: var(--light-second-color);
+	--main-text:var(--light-text);
+	--box-shadow:var(--light-box-shadow);
+	--hove-color:var(--light-hove);
+	--border-color:var(--light-border);
+	--header-background:var(--light-header-background);
+	--color-them:var(--light-color-them);
+	--box-shadow-color:var(--light-color-box-shadow);
+}
+/* #f5f4f2 */
+:root[data-them="dark"] {
+	--main-bg-color: var(--dark-background);
+	--second-bg-color: var(--dark-second-background);
+	--main-color: var(--dark-color);
+	--second-color: var(--dark-second-color);
+	--main-text:var(--dark-text);
+	--box-shadow:var(--dark-box-shadow);
+	--hove-color:var(--dark-hove);
+	--border-color:var(--dark-border);
+	--header-background:var(--dark-header-background);
+	--color-them:var(--dark-color-them);
+	--box-shadow-color:var(--dark-color-box-shadow);
+}

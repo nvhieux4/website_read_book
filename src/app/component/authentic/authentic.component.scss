@@ -1,0 +1,131 @@
+.container-content {
+    
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 25px;
+    margin: 0 25px 0;
+}
+
+.background {
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-link {
+    width: 80px;
+}
+
+
+.group-input{
+    padding: 0 35px 0;
+}
+
+input {
+    font-size: 17px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.sign-in-form {
+    width: 400px;
+    height: 450px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+button {
+    width: 100%;
+}
+
+.row-control {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    width: 50px;
+    cursor: pointer;
+    top: 10%;
+    right: 5px;
+    padding: 15px;
+}
+
+.or {
+    margin: 25px 0 5px;
+    color: #bfb7b7;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 135px;
+        position: absolute;
+        height: 1px;
+        background-color: #bfb7b7;
+        top: 50%;
+        left: 0;
+    }
+    &::after {
+        content: "";
+        width: 135px;
+        position: absolute;
+        height: 1px;
+        background-color: #bfb7b7;
+        top: 50%;
+        right: 0;
+    }
+}
+
+.group-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &__item {
+        width: 200px;
+        margin: 15px;
+        height: 38px;
+        background-color: #1877f2;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(24, 119, 242,0.7) ;
+        }
+    }
+}
+
+.text-introduce {
+    margin-top: 10px;
+    color: #afa9a9;
+
+    &__link {
+        text-decoration: none;
+        padding: 5px;
+        font-size: 16px;
+        color: #e52c2c;
+    }
+}
+:host ::ng-deep { 
+  
+    .p-toast {
+      width: 32rem !important;
+      font-size: 15px !important;
+      height: 100px !important;
+    } 
+}

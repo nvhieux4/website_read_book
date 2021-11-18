@@ -1,0 +1,83 @@
+.container-content {
+    
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 25px;
+    margin: 0 25px 0;
+}
+
+.logo-link {
+    width: 80px;
+}
+
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.background {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 560px;
+}
+
+.group-input{
+    padding: 0 35px 0;
+}
+
+input {
+    font-size: 17px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.icon {
+    position: absolute;
+    width: 50px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    padding: 15px;
+}
+
+.register-form {
+    width: 400px;
+    height: 410px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.text-introduce {
+    margin-top: 10px;
+    color: #afa9a9;
+
+    &__link {
+        text-decoration: none;
+        padding: 5px;
+        font-size: 16px;
+        color: #e52c2c;
+    }
+}
+:host ::ng-deep { 
+  
+    .p-toast {
+      width: 32rem !important;
+      font-size: 15px !important;
+      height: 100px !important;
+    } 
+}

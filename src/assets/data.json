@@ -1,0 +1,17 @@
+{
+    "user": [
+        {
+            "id":1,
+            "name":"hieu",
+            "email":"nvhieux4@gmail.com",
+            "password":"123456778",
+            "isAdmin":true
+        },
+        {
+            "id":2,
+            "name":"hieu nguyen",
+            "email":"test@gmail.com",
+            "isAdmin":false
+        }
+    ]
+}

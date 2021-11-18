@@ -1,0 +1,96 @@
+
+.title {
+    color: var(--main-text);
+    font-size: 20px;
+}
+.book-history {
+    list-style: none;
+
+    &__item {
+        margin-top: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .group {
+            display: flex;
+            align-items: center;
+        }
+        &-img {
+            width: 40px;
+            box-shadow: 4px 4px 2px var(--hove-color);
+            transition: all ease 0.25ms;
+            &:hover {
+                opacity: 0.7;
+            }
+
+        }
+        &-information {
+            margin-left: 15px;
+            a {
+                text-decoration: none;
+            }
+            &__title {
+                margin: 0 0 8px 0;
+                color: var(--main-text);
+                font-weight: 500;
+                font-size: 14px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                line-height: 1.4;
+                transition: all ease 0.3ms;
+                
+                &:hover {
+                    color: #b78a28;
+                }
+            }
+            &__read {
+                opacity: 0.7;
+                font-size: 14px;
+                margin-right: 10px;
+                color: var(--main-text);
+            }
+            .icon {
+                color: var(--main-text);
+                padding: 0 5px;
+                cursor: pointer;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+        &-next {
+            margin-right: 8px;
+            color: #b78a28;
+            font-size: 13px;
+        }
+    }
+}
+
+.title {
+    font-size: 20px;
+    color: var(--main-text);
+}
+
+.list-instruct {
+    &__item {
+        font-size: 16px;
+        margin-top: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        color: var(--main-text);
+        &:hover {
+            color: #b78a28;
+        }
+        &-link {
+            text-decoration: none;
+            color: var(--main-text);
+            &:hover {
+                color: #b78a28;
+            }
+        }
+    }
+}
